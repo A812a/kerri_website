@@ -1,0 +1,380 @@
+:root
+{
+    --mainColor: #e65f78;
+    --secondery: rgb(248,249,250);
+}
+@font-face
+{
+    font-family: nunito;
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
+.backToTop {
+    cursor: pointer;
+    transition: 0.4s;
+}
+/* main heading */
+.heading p
+{
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+@media (max-width:790px)
+{
+    .heading p
+    {
+        width: 100%;
+    }
+}
+/* start navbar */
+.navbar {
+    transition: 0.4s;
+    z-index: 9999;
+}
+.navbar .navbar-nav .nav-link
+{
+    color: white;
+    transition: 0.5s;
+    margin: 0 5px;
+}
+.navbar .navbar-nav .nav-link:hover
+{
+    color: var(--mainColor);
+}
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link
+{
+    color: var(--mainColor);
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+/* end navbar */
+/* start header */
+#home
+{
+    background-image: url(../images/header/header-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+#home .layer-home
+{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+#home h1
+{
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+h1::after
+{
+    content: " a |";
+    position: relative;
+    animation: h1 4s linear infinite alternate;
+}
+@keyframes h1
+{
+    0%{content:" I'M|"}
+    2%{content:" I'M |"}
+    4%{content:" I'M K|"}
+    6%{content:" I'M Ke|"}
+    8%{content:" I'M Ker|"}
+    10%{content:" I'M Kerr|"}
+    12%{content:" I'M Kerri|"}
+    14%{content:" I'M Kerri |"}
+    16%{content:" I'M Kerri D|"}
+    18%{content:" I'M Kerri De|"}
+    20%{content:" I'M Kerri Deo|"}
+    22%{content:" I'M Kerri Deo.|"}
+    24%{content:" I'M Kerri Deo|"}
+    26%{content:" I'M Kerri De|"}
+    28%{content:" I'M Kerri D|"}
+    30%{content:" I'M Kerri |"}
+    32%{content:" I'M Kerri|"}
+    34%{content:" I'M Kerr|"}
+    36%{content:" I'M Ker|"}
+    38%{content:" I'M Ke|"}
+    40%{content:" I'M K|"}
+    42%{content:" I'M |"}
+    44%{content:" I'M|"}
+    100%{content:" I'M|"}
+}
+#home .cont-home button
+{
+    color: white;
+    font-weight: 600;
+    border: 1px solid white;
+    background-color: transparent;
+    outline: none;
+    transition: 0.5s;
+}
+#home .cont-home button:hover
+{
+    background-color: white;
+    color: black;
+}
+#home .cont-home .icon-down
+{
+    margin: auto;
+    width: 25px;
+    height: 45px;
+    border: 2px solid white;
+    border-radius: 15px;
+    transform: translateY(60px);
+}
+#home .cont-home .icon-down span
+{
+    width: 6px;
+    height: 6px;
+    margin-top: 3px;
+    border-radius: 50%;
+    background-color: white;
+    animation: icondown 2s infinite;
+}
+@keyframes icondown
+{
+    0%{transform: translateY(0);}
+    90%{transform: translateY(25px);}
+    100%{transform: translateY(0);}
+}
+#home .icon-gear
+{
+    top: 20%;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+#home .icon-gear i
+{
+    animation: gear 1s infinite;
+}
+@keyframes gear
+{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+/* end header */
+/* start section about */
+#about img
+{
+    outline: 1px solid rgba(0, 0, 0, 0.3);
+    border: 5px solid white;
+    border-radius: 2px;
+}
+#about .about-icon
+{
+    width: 45px;
+    height: 45px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    transition: 0.3s all;
+    cursor: pointer;
+}
+#about .about-icon i
+{
+    color: black;
+    font-size: 18px;
+    transition: 0.3s all;
+}
+#about .about-icon:hover
+{
+    border: 2px solid var(--mainColor);
+}
+#about .about-icon:hover i
+{
+    color: var(--mainColor);
+}
+/* end header */
+/* start section services */
+#services
+{
+    background-color: var(--secondery);
+}
+#services .card-serv i
+{
+    color: var(--mainColor);
+}
+#services .card-serv h3::before
+{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    background-color: var(--mainColor);
+    bottom: -15px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    transition: 0.5s;
+}
+#services .card-serv:hover h3::before
+{
+    width: 30%;
+}
+/* end section services */
+/* start section link */
+.link button
+{
+    background-color: var(--mainColor);
+    transition: 0.5s;
+}
+.link button:hover
+{
+    background-color: #ff4444;
+}
+/* end section link */
+/* start section client */
+#client 
+{
+    background-color: var(--secondery);
+}
+#client .cont-cursole i
+{
+    font-size: 3rem;
+    color: var(--mainColor);
+}
+#client .img-client
+{
+    padding: 3px;
+    border: 1px solid gray;
+}
+#client .carousel-indicators [data-bs-target]
+{
+    width: 18px;
+    height: 5px;
+    background-color: var(--mainColor);
+    transition: 0.5s;
+    border: none;
+    border-radius: 20px;
+} 
+#client .carousel-indicators .active
+{
+    width: 25px;
+}
+/* end section client */
+/* start section portfolio */
+#portfolio .nav-pills .nav-link.active, .nav-pills .show>.nav-link
+{
+    background-color: var(--mainColor);
+    color: white;
+}
+.nav-pills .nav-link
+{
+    margin: 0 5px;
+    color: black;
+}
+#portfolio .portfolio-item
+{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+#portfolio .portfolio-item .layer
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); 
+    opacity: 0;
+    transition: 0.5s;
+} 
+#portfolio .portfolio-item .layer:hover
+{
+    opacity: 1;
+}
+#portfolio .portfolio-item .layer-text
+{
+    position: relative;
+    top: 100%;
+    transition: 0.5s;
+}
+#portfolio .portfolio-item .layer:hover .layer-text
+{
+    top: 0;
+} 
+#portfolio .portfolio-item .image
+{
+    transition: 0.5s 0.5s all;
+}
+#portfolio .portfolio-item:hover .image
+{
+    transform: scale(1.3 , 1.3);
+}
+/* end section portfolio */
+/* start section blog */
+#blog
+{
+    background-color: #fafafa;
+}
+#blog .card a
+{
+    text-decoration: none;
+}
+#blog .card .parg-link
+{
+    color: var(--mainColor);
+    font-weight: 700;
+}
+#blog .card .parg-card{
+    font-size: 17px;
+    font-weight: 500;
+} 
+/* end section blog */
+/* start section contact */
+#contact .item-blog i
+{
+    color: var(--mainColor);
+}
+#contact input,#contact textarea
+{
+    border: 2px solid #ddd;
+    outline: none;
+}
+#contact input:focus,#contact textarea:focus
+{
+    border: 2px solid var(--mainColor);
+}
+#contact .btn-contact
+{
+    background-color: var(--mainColor);
+    border: none;
+    transition: 0.5s;
+}
+#contact .btn-contact:hover
+{
+    background-color: #ff4444;
+}
+/* end section contact */
+/* start footer */
+footer
+{
+    background-color: #212121;
+}
+footer .icons-footer .cont-icon
+{
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    background-color: rgba(241, 241, 241, 0.08);
+}
+footer .icons-footer .icon-footer
+{
+    color: gray;  
+    transition: 0.5s;
+}
+footer .cont-icon:hover i
+{
+    color: var(--mainColor);
+}
+footer .parg-footer
+{
+    color: gray;
+}
+/* end footer */
